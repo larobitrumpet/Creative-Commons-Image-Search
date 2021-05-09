@@ -97,6 +97,12 @@ public class controller implements Initializable
     @FXML
     private CheckBox ckbSIACM;
     @FXML
+    private CheckBox ckbSICHSDM;
+    @FXML
+    private CheckBox ckbSIFGA;
+    @FXML
+    private CheckBox ckbSISG;
+    @FXML
     private CheckBox ckbSIHMSG;
     @FXML
     private CheckBox ckbSIA;
