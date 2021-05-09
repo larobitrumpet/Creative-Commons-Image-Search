@@ -26,7 +26,7 @@ public class SingleLinkList<T>
      */
     public String toString()
     {
-        String s = "top";
+/*        String s = "top";
         Boxcar<T> boxcar = head;
         if (head != null)
         {
@@ -38,7 +38,7 @@ public class SingleLinkList<T>
             }
         }
         s += ", bottom";
-        return s;
+        return s;*/
 /*        String s = "engine";
         if (head != null)
         {
@@ -49,7 +49,7 @@ public class SingleLinkList<T>
             } while (boxcar != null);
         }
         return s;*/
-/*      String s = "";
+      String s = "";
       Boxcar<T> boxcar = head;
 
       if (head == null)
@@ -64,10 +64,10 @@ public class SingleLinkList<T>
         {
           boxcar = boxcar.next();
           data = boxcar.data();
-          s = s + ", " + data.toString();
+          s = s + "," + data.toString();
         }
       }
-      return s;*/
+      return s;
     }
     
      /**
