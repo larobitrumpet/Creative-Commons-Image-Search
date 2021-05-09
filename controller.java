@@ -18,7 +18,7 @@ import javafx.scene.image.ImageView;
  * @author Luke Robillard
  */
 
-public class WxController implements Initializable
+public class controller implements Initializable
 {
     @FXML
     private CheckBox ckbCommercially;
