@@ -6,19 +6,19 @@ import javafx.scene.image.ImageView;
 
 public class ImageResult
 {
-    GridPane root;
-    ImageView imgImage, imgCC0, imgCC1, imgCC2, imgCC3;
-    Label lblTitle;
-    Button btnMore, btnDownload;
+    private GridPane root;
+    private ImageView imgImage, imgCC0, imgCC1, imgCC2, imgCC3;
+    private Label lblTitle;
+    private Button btnMore, btnDownload;
 
-    public static void ImageResult()
+    public void ImageResult()
     {
         root = new GridPane();
-        imgImage = new Image();
-        imgCC0 = new Image();
-        imgCC1 = new Image();
-        imgCC2 = new Image();
-        imgCC3 = new Image();
+        imgImage = new ImageView();
+        imgCC0 = new ImageView();
+        imgCC1 = new ImageView();
+        imgCC2 = new ImageView();
+        imgCC3 = new ImageView();
         lblTitle = new Label();
         btnMore = new Button("More Info");
         btnDownload = new Button("Download");
@@ -35,32 +35,37 @@ public class ImageResult
         root.setColumnSpan(btnDownload, 4);
     }
 
-    public static void setTitle(String title)
+    public GridPane getRoot()
+    {
+        return root;
+    }
+
+    public void setTitle(String title)
     {
         lblTitle.setText(title);
     }
 
-    public static void setImage(Image img)
+    public void setImage(Image img)
     {
         imgImage.setImage(img);
     }
 
-    public static void setCC0(Image img)
+    public void setCC0(Image img)
     {
         imgCC0.setImage(img);
     }
 
-    public static void setCC1(Image img)
+    public void setCC1(Image img)
     {
         imgCC1.setImage(img);
     }
 
-    public static void setCC2(Image img)
+    public void setCC2(Image img)
     {
         imgCC2.setImage(img);
     }
 
-    public static void setCC3(Image img)
+    public void setCC3(Image img)
     {
         imgCC3.setImage(img);
     }
