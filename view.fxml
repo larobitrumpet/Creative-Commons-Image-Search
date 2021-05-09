@@ -18,7 +18,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<SplitPane dividerPositions="0.3" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.202-ea" xmlns:fx="http://javafx.com/fxml/1">
+<SplitPane dividerPositions="0.3" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.202-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller">
   <items>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
          <children>
@@ -30,8 +30,8 @@
                            <children>
                               <VBox prefHeight="189.0" prefWidth="172.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <children>
-                                    <CheckBox mnemonicParsing="false" text="Use commercially" />
-                                    <CheckBox mnemonicParsing="false" text="Modify or adapt" />
+                                    <CheckBox fx:id="ckbCommercially" mnemonicParsing="false" text="Use commercially" />
+                                    <CheckBox fx:id="ckbModify" mnemonicParsing="false" text="Modify or adapt" />
                                  </children>
                               </VBox>
                            </children>
@@ -61,7 +61,7 @@
                                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                 </rowConstraints>
                                  <children>
-                                    <CheckBox mnemonicParsing="false" text="CC0" />
+                                    <CheckBox fx:id="ckbCC0" mnemonicParsing="false" text="CC0" />
                                     <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
                                        <image>
                                           <Image url="@cc_images/26px-Cc.logo.circle.svg.png" />
@@ -72,7 +72,7 @@
                                           <Image url="@cc_images/26px-Cc-zero.svg.png" />
                                        </image>
                                     </ImageView>
-                                    <CheckBox mnemonicParsing="false" text="Public Domain Mark" GridPane.rowIndex="1" />
+                                    <CheckBox fx:id="ckbPublicDomain" mnemonicParsing="false" text="Public Domain Mark" GridPane.rowIndex="1" />
                                     <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                        <image>
                                           <Image url="@cc_images/26px-Cc.logo.circle.svg.png" />
@@ -83,7 +83,7 @@
                                           <Image url="@cc_images/26px-PD-icon-black.svg.png" />
                                        </image>
                                     </ImageView>
-                                    <CheckBox mnemonicParsing="false" text="BY" GridPane.rowIndex="2" />
+                                    <CheckBox fx:id="ckbBY" mnemonicParsing="false" text="BY" GridPane.rowIndex="2" />
                                     <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
                                        <image>
                                           <Image url="@cc_images/26px-Cc.logo.circle.svg.png" />
@@ -94,7 +94,7 @@
                                           <Image url="@cc_images/26px-Cc-by_new.svg.png" />
                                        </image>
                                     </ImageView>
-                                    <CheckBox mnemonicParsing="false" text="BY-SA" GridPane.rowIndex="3" />
+                                    <CheckBox fx:id="ckbBY_SA" mnemonicParsing="false" text="BY-SA" GridPane.rowIndex="3" />
                                     <ImageView fitHeight="150.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
                                        <image>
                                           <Image url="@cc_images/26px-Cc.logo.circle.svg.png" />
@@ -110,7 +110,7 @@
                                           <Image url="@cc_images/26px-Cc-sa.svg.png" />
                                        </image>
                                     </ImageView>
-                                    <CheckBox mnemonicParsing="false" text="BY-NC" GridPane.rowIndex="4" />
+                                    <CheckBox fx:id="ckbBY_NC" mnemonicParsing="false" text="BY-NC" GridPane.rowIndex="4" />
                                     <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
                                        <image>
                                           <Image url="@cc_images/26px-Cc.logo.circle.svg.png" />
@@ -126,7 +126,7 @@
                                           <Image url="@cc_images/26px-Cc-nc.svg.png" />
                                        </image>
                                     </ImageView>
-                                    <CheckBox mnemonicParsing="false" text="BY-ND" GridPane.rowIndex="5" />
+                                    <CheckBox fx:id="ckbBY_ND" mnemonicParsing="false" text="BY-ND" GridPane.rowIndex="5" />
                                     <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="5">
                                        <image>
                                           <Image url="@cc_images/26px-Cc.logo.circle.svg.png" />
@@ -142,7 +142,7 @@
                                           <Image url="@cc_images/26px-Cc-nd.svg.png" />
                                        </image>
                                     </ImageView>
-                                    <CheckBox mnemonicParsing="false" text="BY-NC-SA" GridPane.rowIndex="6" />
+                                    <CheckBox fx:id="ckbBY_NC_SA" mnemonicParsing="false" text="BY-NC-SA" GridPane.rowIndex="6" />
                                     <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="6">
                                        <image>
                                           <Image url="@cc_images/26px-Cc.logo.circle.svg.png" />
@@ -163,7 +163,7 @@
                                           <Image url="@cc_images/26px-Cc-sa.svg.png" />
                                        </image>
                                     </ImageView>
-                                    <CheckBox mnemonicParsing="false" text="BY-NC-ND" GridPane.rowIndex="7" />
+                                    <CheckBox fx:id="ckbBY_NC_ND" mnemonicParsing="false" text="BY-NC-ND" GridPane.rowIndex="7" />
                                     <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="7">
                                        <image>
                                           <Image url="@cc_images/26px-Cc.logo.circle.svg.png" />
@@ -200,51 +200,51 @@
                                        <children>
                                           <VBox prefHeight="589.0" prefWidth="473.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                              <children>
-                                                <CheckBox mnemonicParsing="false" text="Animal Diversity Web" wrapText="true" />
-                                                <CheckBox mnemonicParsing="false" text="Biodiversity Heritage Library" wrapText="true" />
-                                                <CheckBox mnemonicParsing="false" text="Brooklyn Museum" wrapText="true" />
-                                                <CheckBox mnemonicParsing="false" text="Culturally Authentic Pictorial Lexicon" wrapText="true" />
-                                                <CheckBox mnemonicParsing="false" text="Cleveland Museum of Art" wrapText="true" />
-                                                <CheckBox mnemonicParsing="false" text="DeviantArt" wrapText="true" />
-                                                <CheckBox mnemonicParsing="false" text="Digitalt Museum" wrapText="true" />
-                                                <CheckBox mnemonicParsing="false" text="Europeana" wrapText="true" />
-                                                <CheckBox mnemonicParsing="false" text="Flickr" wrapText="true" />
-                                                <CheckBox mnemonicParsing="false" text="Flora-On" wrapText="true" />
-                                                <CheckBox mnemonicParsing="false" text="Geograph Britain and Ireland" wrapText="true" />
-                                                <CheckBox mnemonicParsing="false" text="McCord Museum" wrapText="true" />
-                                                <CheckBox mnemonicParsing="false" text="Metropolitan Museum of Art" wrapText="true" />
-                                                <CheckBox mnemonicParsing="false" text="Museums Victoria" wrapText="true" />
-                                                <CheckBox mnemonicParsing="false" text="NASA" wrapText="true" />
-                                                <CheckBox mnemonicParsing="false" text="New York Public Library" wrapText="true" />
-                                                <CheckBox mnemonicParsing="false" text="PhyloPic" wrapText="true" />
-                                                <CheckBox mnemonicParsing="false" text="Rawpixel" wrapText="true" />
-                                                <CheckBox mnemonicParsing="false" text="Rijksmuseum" wrapText="true" />
-                                                <CheckBox mnemonicParsing="false" text="Science Museum – UK" wrapText="true" />
-                                                <CheckBox mnemonicParsing="false" text="Sketchfab" wrapText="true" />
-                                                <CheckBox mnemonicParsing="false" text="Smithsonian Institution: National Museum of African American History and Culture" wrapText="true" />
-                                                <CheckBox mnemonicParsing="false" text="Smithsonian Institution: National Museum of African Art" wrapText="true" />
-                                                <CheckBox mnemonicParsing="false" text="Smithsonian Institution: National Air and Space Museum" wrapText="true" />
-                                                <CheckBox mnemonicParsing="false" text="Smithsonian Institution: Smithsonian American Art Museum" wrapText="true" />
-                                                <CheckBox mnemonicParsing="false" text="Smithsonian Institution: National Museum of American History" wrapText="true" />
-                                                <CheckBox mnemonicParsing="false" text="Smithsonian Institution: National Museum of the American Indian" wrapText="true" />
-                                                <CheckBox mnemonicParsing="false" text="Smithsonian Institution: Anacostia Community Museum" wrapText="true" />
-                                                <CheckBox mnemonicParsing="false" text="Smithsonian Institution: Cooper Hewitt, Smithsonian Design Museum" wrapText="true" />
-                                                <CheckBox mnemonicParsing="false" text="Smithsonian Institution: Freer Gallery of Art" wrapText="true" />
-                                                <CheckBox mnemonicParsing="false" text="Smithsonian Institution: Smithsonian Gardens" wrapText="true" />
-                                                <CheckBox mnemonicParsing="false" text="Smithsonian Institution: Hirshhorn Museum and Sculpture Garden" wrapText="true" />
-                                                <CheckBox mnemonicParsing="false" text="Smithsonian Institution Archives" wrapText="true" />
-                                                <CheckBox mnemonicParsing="false" text="Smithsonian Institution: Smithsonian Libraries" wrapText="true" />
-                                                <CheckBox mnemonicParsing="false" text="Smithsonian Institution: National Museum of Natural History" wrapText="true" />
-                                                <CheckBox mnemonicParsing="false" text="Smithsonian Institution: National Portrait Gallery" wrapText="true" />
-                                                <CheckBox mnemonicParsing="false" text="Smithsonian Institution: National Postal Museum" />
-                                                <CheckBox mnemonicParsing="false" text="Smithsonian Institution: National Zoo" />
-                                                <CheckBox mnemonicParsing="false" text="SpaceX" />
-                                                <CheckBox mnemonicParsing="false" text="SVG Silh" />
-                                                <CheckBox mnemonicParsing="false" text="Thingiverse" />
-                                                <CheckBox mnemonicParsing="false" text="Thorvaldsens Museum" />
-                                                <CheckBox mnemonicParsing="false" text="Wikimedia Commons" />
-                                                <CheckBox mnemonicParsing="false" text="WOCinTech Chat" />
-                                                <CheckBox mnemonicParsing="false" text="World Register of Marine Species" />
+                                                <CheckBox fx:id="ckbADW" mnemonicParsing="false" text="Animal Diversity Web" wrapText="true" />
+                                                <CheckBox fx:id="ckbBHL" mnemonicParsing="false" text="Biodiversity Heritage Library" wrapText="true" />
+                                                <CheckBox fx:id="ckbBM" mnemonicParsing="false" text="Brooklyn Museum" wrapText="true" />
+                                                <CheckBox fx:id="ckbCAPL" mnemonicParsing="false" text="Culturally Authentic Pictorial Lexicon" wrapText="true" />
+                                                <CheckBox fx:id="ckbCMA" mnemonicParsing="false" text="Cleveland Museum of Art" wrapText="true" />
+                                                <CheckBox fx:id="ckbDA" mnemonicParsing="false" text="DeviantArt" wrapText="true" />
+                                                <CheckBox fx:id="ckbDM" mnemonicParsing="false" text="Digitalt Museum" wrapText="true" />
+                                                <CheckBox fx:id="ckbE" mnemonicParsing="false" text="Europeana" wrapText="true" />
+                                                <CheckBox fx:id="ckbF" mnemonicParsing="false" text="Flickr" wrapText="true" />
+                                                <CheckBox fx:id="ckbFO" mnemonicParsing="false" text="Flora-On" wrapText="true" />
+                                                <CheckBox fx:id="ckbGBI" mnemonicParsing="false" text="Geograph Britain and Ireland" wrapText="true" />
+                                                <CheckBox fx:id="ckbMCM" mnemonicParsing="false" text="McCord Museum" wrapText="true" />
+                                                <CheckBox fx:id="ckbMMA" mnemonicParsing="false" text="Metropolitan Museum of Art" wrapText="true" />
+                                                <CheckBox fx:id="ckbMV" mnemonicParsing="false" text="Museums Victoria" wrapText="true" />
+                                                <CheckBox fx:id="ckbNASA" mnemonicParsing="false" text="NASA" wrapText="true" />
+                                                <CheckBox fx:id="ckbNYPL" mnemonicParsing="false" text="New York Public Library" wrapText="true" />
+                                                <CheckBox fx:id="ckbPP" mnemonicParsing="false" text="PhyloPic" wrapText="true" />
+                                                <CheckBox fx:id="ckbR" mnemonicParsing="false" text="Rawpixel" wrapText="true" />
+                                                <CheckBox fx:id="ckbRM" mnemonicParsing="false" text="Rijksmuseum" wrapText="true" />
+                                                <CheckBox fx:id="ckbSM" mnemonicParsing="false" text="Science Museum – UK" wrapText="true" />
+                                                <CheckBox fx:id="ckbS" mnemonicParsing="false" text="Sketchfab" wrapText="true" />
+                                                <CheckBox fx:id="ckbSINMAAHC" mnemonicParsing="false" text="Smithsonian Institution: National Museum of African American History and Culture" wrapText="true" />
+                                                <CheckBox fx:id="ckbSINMAA" mnemonicParsing="false" text="Smithsonian Institution: National Museum of African Art" wrapText="true" />
+                                                <CheckBox fx:id="ckbSINASM" mnemonicParsing="false" text="Smithsonian Institution: National Air and Space Museum" wrapText="true" />
+                                                <CheckBox fx:id="ckbSISAAM" mnemonicParsing="false" text="Smithsonian Institution: Smithsonian American Art Museum" wrapText="true" />
+                                                <CheckBox fx:id="ckbSINMAH" mnemonicParsing="false" text="Smithsonian Institution: National Museum of American History" wrapText="true" />
+                                                <CheckBox fx:id="ckbSINMAI" mnemonicParsing="false" text="Smithsonian Institution: National Museum of the American Indian" wrapText="true" />
+                                                <CheckBox fx:id="ckbSIACM" mnemonicParsing="false" text="Smithsonian Institution: Anacostia Community Museum" wrapText="true" />
+                                                <CheckBox fx:id="ckbSICHSDM" mnemonicParsing="false" text="Smithsonian Institution: Cooper Hewitt, Smithsonian Design Museum" wrapText="true" />
+                                                <CheckBox fx:id="ckbSIFGA" mnemonicParsing="false" text="Smithsonian Institution: Freer Gallery of Art" wrapText="true" />
+                                                <CheckBox fx:id="ckbSISG" mnemonicParsing="false" text="Smithsonian Institution: Smithsonian Gardens" wrapText="true" />
+                                                <CheckBox fx:id="ckbSIHMSG" mnemonicParsing="false" text="Smithsonian Institution: Hirshhorn Museum and Sculpture Garden" wrapText="true" />
+                                                <CheckBox fx:id="ckbSIA" mnemonicParsing="false" text="Smithsonian Institution Archives" wrapText="true" />
+                                                <CheckBox fx:id="ckbSISL" mnemonicParsing="false" text="Smithsonian Institution: Smithsonian Libraries" wrapText="true" />
+                                                <CheckBox fx:id="ckbSINMNH" mnemonicParsing="false" text="Smithsonian Institution: National Museum of Natural History" wrapText="true" />
+                                                <CheckBox fx:id="ckbSINPG" mnemonicParsing="false" text="Smithsonian Institution: National Portrait Gallery" wrapText="true" />
+                                                <CheckBox fx:id="ckbSINPM" mnemonicParsing="false" text="Smithsonian Institution: National Postal Museum" />
+                                                <CheckBox fx:id="ckbSINZ" mnemonicParsing="false" text="Smithsonian Institution: National Zoo" />
+                                                <CheckBox fx:id="ckbSX" mnemonicParsing="false" text="SpaceX" />
+                                                <CheckBox fx:id="ckbSVGS" mnemonicParsing="false" text="SVG Silh" />
+                                                <CheckBox fx:id="ckbT" mnemonicParsing="false" text="Thingiverse" />
+                                                <CheckBox fx:id="ckbTM" mnemonicParsing="false" text="Thorvaldsens Museum" />
+                                                <CheckBox fx:id="ckbWC" mnemonicParsing="false" text="Wikimedia Commons" />
+                                                <CheckBox fx:id="ckbWOCTC" mnemonicParsing="false" text="WOCinTech Chat" />
+                                                <CheckBox fx:id="ckbWRMS" mnemonicParsing="false" text="World Register of Marine Species" />
                                              </children>
                                           </VBox>
                                        </children>
@@ -261,9 +261,9 @@
                            <children>
                               <VBox layoutX="125.0" layoutY="-53.0" prefHeight="989.0" prefWidth="473.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <children>
-                                    <CheckBox mnemonicParsing="false" text="Photographs" />
-                                    <CheckBox mnemonicParsing="false" text="Illustrations" />
-                                    <CheckBox mnemonicParsing="false" text="Digitized Artworks" />
+                                    <CheckBox fx:id="ckbPhotos" mnemonicParsing="false" text="Photographs" />
+                                    <CheckBox fx:id="ckbIllustrations" mnemonicParsing="false" text="Illustrations" />
+                                    <CheckBox fx:id="ckbDigitizedArt" mnemonicParsing="false" text="Digitized Artworks" />
                                  </children>
                               </VBox>
                            </children>
@@ -276,10 +276,10 @@
                            <children>
                               <VBox layoutX="178.0" layoutY="317.0" prefHeight="989.0" prefWidth="473.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <children>
-                                    <CheckBox mnemonicParsing="false" text="JPEGs" />
-                                    <CheckBox mnemonicParsing="false" text="PNGs" />
-                                    <CheckBox mnemonicParsing="false" text="GIFs" />
-                                    <CheckBox mnemonicParsing="false" text="SVGs" />
+                                    <CheckBox fx:id="ckbJPEG" mnemonicParsing="false" text="JPEGs" />
+                                    <CheckBox fx:id="ckbPNG" mnemonicParsing="false" text="PNGs" />
+                                    <CheckBox fx:id="ckbGIF" mnemonicParsing="false" text="GIFs" />
+                                    <CheckBox fx:id="ckbSVG" mnemonicParsing="false" text="SVGs" />
                                  </children>
                               </VBox>
                            </children>
@@ -292,9 +292,9 @@
                            <children>
                               <VBox layoutX="31.0" layoutY="-13.0" prefHeight="989.0" prefWidth="473.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <children>
-                                    <CheckBox mnemonicParsing="false" text="Tall" />
-                                    <CheckBox mnemonicParsing="false" text="Wide" />
-                                    <CheckBox mnemonicParsing="false" text="Square" />
+                                    <CheckBox fx:id="ckbTall" mnemonicParsing="false" text="Tall" />
+                                    <CheckBox fx:id="ckbWide" mnemonicParsing="false" text="Wide" />
+                                    <CheckBox fx:id="ckbSquare" mnemonicParsing="false" text="Square" />
                                  </children>
                               </VBox>
                            </children>
@@ -307,9 +307,9 @@
                            <children>
                               <VBox layoutX="94.0" layoutY="325.0" prefHeight="989.0" prefWidth="473.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <children>
-                                    <CheckBox mnemonicParsing="false" text="Small" />
-                                    <CheckBox mnemonicParsing="false" text="Medium" />
-                                    <CheckBox mnemonicParsing="false" text="Large" />
+                                    <CheckBox fx:id="ckbSmall" mnemonicParsing="false" text="Small" />
+                                    <CheckBox fx:id="ckbMedium" mnemonicParsing="false" text="Medium" />
+                                    <CheckBox fx:id="ckbLarge" mnemonicParsing="false" text="Large" />
                                  </children>
                               </VBox>
                            </children>
@@ -322,7 +322,7 @@
                            <children>
                               <VBox prefHeight="989.0" prefWidth="473.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <children>
-                                    <CheckBox mnemonicParsing="false" text="Search by Creator" />
+                                    <CheckBox fx:id="ckbCreator" mnemonicParsing="false" text="Search by Creator" />
                                  </children>
                               </VBox>
                            </children>
@@ -340,8 +340,8 @@
                      <children>
                         <HBox prefHeight="155.0" prefWidth="713.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
-                              <TextField promptText="Search" />
-                              <Button mnemonicParsing="false" text="Search" />
+                              <TextField fx:id="txtSearch" promptText="Search" />
+                              <Button fx:id="btnSearch" mnemonicParsing="false" text="Search" />
                            </children>
                         </HBox>
                      </children>
