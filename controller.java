@@ -31,15 +31,15 @@ public class controller implements Initializable
     @FXML
     private CheckBox ckbBY;
     @FXML
-    private CheckBox ckbBY-SA;
+    private CheckBox ckbBY_SA;
     @FXML
-    private CheckBox ckbBY-NC;
+    private CheckBox ckbBY_NC;
     @FXML
-    private CheckBox ckbBY-ND;
+    private CheckBox ckbBY_ND;
     @FXML
-    private CheckBox ckbBY-NC-SA;
+    private CheckBox ckbBY_NC_SA;
     @FXML
-    private CheckBox ckbBY-NC-ND;
+    private CheckBox ckbBY_NC_ND;
     @FXML
     private CheckBox ckbADW;
     @FXML
