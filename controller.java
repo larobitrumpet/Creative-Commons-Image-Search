@@ -7,6 +7,7 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.layout.FlowPane;
 import javafx.scene.control.Label;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
@@ -162,6 +163,8 @@ public class controller implements Initializable
     private TextField txtSearch;
     @FXML
     private Button btnSearch;
+    @FXML
+    private FlowPane floSearchResults;
 
     @FXML
     private void btnSearchPressed(ActionEvent e)

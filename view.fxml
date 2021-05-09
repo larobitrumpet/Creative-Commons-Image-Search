@@ -352,7 +352,7 @@
                           <content>
                             <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="900.0" minWidth="700.0">
                                  <children>
-                                    <FlowPane prefHeight="900.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <FlowPane fx:id="floSearchResults" prefHeight="900.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                        <children>
                                           <GridPane prefHeight="230.0" prefWidth="230.0" style="-fx-padding: 10px;">
                                             <columnConstraints>
