@@ -17,6 +17,15 @@ import com.google.gson.*;
 public class model
 {
     private JsonElement jse = null;
+    GenericList<ImageResult> imageResults = new GenericList<ImageResult>;
+
+    private Image CC = new Image("cc_images/26px-Cc.logo.circle.svg.png");
+    private Image CC0 = new Image("cc_images/26px-Cc-zero.svg.png");
+    private Image PD = new Image("cc_images/26px-PD-icon-black.svg.png");
+    private Image BY = new Image("cc_images/26px-Cc-by_new.svg.png");
+    private Image SA = new Image("cc_images/26px-Cc-sa.svg.png");
+    private Image NC = new Image("cc_images/26px-Cc-nc.svg.png");
+    private Image ND = new Image("cc_images/26px-Cc-nd.svg.png");
 
     public boolean getSearchResults(String query, String license_type, String license, String source, String categories, String extension, String aspect_ratio, String size, boolean creator)
     {
@@ -56,6 +65,12 @@ public class model
         if (jse != null)
         {
             // Build search results
+            int numResults = jse.getAsJsonObject.get("page_size").getAsInteger();
+            JsonArray results = jse.getAsJsonObject.get("results").getAsJsonArray();
+            for (int i = 0; i < numResults; i++)
+            {
+                imageResults.add(constructResult(results.get(i).getAsJsonObject()));
+            }
         }
         return true;
     }
@@ -84,5 +99,63 @@ public class model
             CCURLString += "&size=" + size;
 
         return CCURLString;
+    }
+
+    public ImageResult constructResult(JsonObject result)
+    {
+        ImageResult img = new ImageResult();
+        img.setTitle(result.getAsJsonObject.get("title").getAsString());
+        img.setImage(new Image(result.getAsJsonObject.get("url").getAsString()));
+        String license = result.getAsJsonObject.get("license").getAsString();
+        switch (license)
+        {
+            case "cc0":
+                img.setCC0(CC);
+                img.setCC1(CC0);
+                break;
+            case "pdm":
+                img.setCC0(CC);
+                img.setCC1(PD);
+                break;
+            case "by":
+                img.setCC0(CC);
+                img.setCC1(BY);
+                break;
+            case "by-sa":
+                img.setCC0(CC);
+                img.setCC1(BY);
+                img.setCC2(SA);
+                break;
+            case "by-nc":
+                img.setCC0(CC);
+                img.setCC1(BY);
+                img.setCC2(NC);
+                break;
+            case "by-nd":
+                img.setCC0(CC);
+                img.setCC1(BY);
+                img.setCC2(ND);
+                break;
+            case "by-nc-sa":
+                img.setCC0(CC);
+                img.setCC1(BY);
+                img.setCC2(NC);
+                img.setCC3(SA);
+                break;
+            case "by-nc-nd":
+                img.setCC0(CC);
+                img.setCC1(BY);
+                img.setCC2(NC);
+                img.setCC3(ND);
+                break;
+            default:
+                break;
+        }
+        return img;
+    }
+
+    public getResults()
+    {
+        return imageResults;
     }
 }
