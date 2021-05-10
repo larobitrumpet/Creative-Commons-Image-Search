@@ -76,7 +76,14 @@ public class CCISModel
             CCURLString += "&creator=";
         else 
             CCURLString += "&q=";
-        CCURLString += query;
+        try
+        {
+            CCURLString += URLEncoder.encode(query, "UTF-8");
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
         if (!(license_type.equals("")))
             CCURLString += "&license_type=" + license_type;
         if (!(license.equals("")))
