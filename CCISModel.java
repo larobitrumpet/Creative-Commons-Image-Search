@@ -17,7 +17,7 @@ import com.google.gson.*;
 public class CCISModel
 {
     private JsonElement jse = null;
-    GenericList<ImageResult> imageResults = new GenericList<ImageResult>;
+    GenericList<ImageResult> imageResults = new GenericList<ImageResult>();
 
     private Image CC = new Image("cc_images/26px-Cc.logo.circle.svg.png");
     private Image CC0 = new Image("cc_images/26px-Cc-zero.svg.png");
@@ -65,8 +65,8 @@ public class CCISModel
         if (jse != null)
         {
             // Build search results
-            int numResults = jse.getAsJsonObject.get("page_size").getAsInteger();
-            JsonArray results = jse.getAsJsonObject.get("results").getAsJsonArray();
+            int numResults = Integer.parseInt(jse.getAsJsonObject().get("page_size").getAsString());
+            JsonArray results = jse.getAsJsonObject().get("results").getAsJsonArray();
             for (int i = 0; i < numResults; i++)
             {
                 imageResults.add(constructResult(results.get(i).getAsJsonObject()));
@@ -104,9 +104,9 @@ public class CCISModel
     public ImageResult constructResult(JsonObject result)
     {
         ImageResult img = new ImageResult();
-        img.setTitle(result.getAsJsonObject.get("title").getAsString());
-        img.setImage(new Image(result.getAsJsonObject.get("url").getAsString()));
-        String license = result.getAsJsonObject.get("license").getAsString();
+        img.setTitle(result.getAsJsonObject().get("title").getAsString());
+        img.setImage(new Image(result.getAsJsonObject().get("url").getAsString()));
+        String license = result.getAsJsonObject().get("license").getAsString();
         switch (license)
         {
             case "cc0":

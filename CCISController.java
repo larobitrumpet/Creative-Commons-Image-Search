@@ -253,13 +253,13 @@ public class CCISController implements Initializable
         Size[2] = ckbLarge.isSelected();
         Creator = ckbCreator.isSelected();
 
-        SingleLinkList<String> license_type = new SingleLinkList<String>;
+        SingleLinkList<String> license_type = new SingleLinkList<String>();
         if (Use[0])
             license_type.push("commercial");
         if (Use[1])
             license_type.push("modification");
 
-        SingleLinkList<String> license = new SingleLinkList<String>;
+        SingleLinkList<String> license = new SingleLinkList<String>();
         if (License[0])
             license.push("CC0");
         if (License[1])
@@ -271,13 +271,13 @@ public class CCISController implements Initializable
         if (License[4])
             license.push("BY-NC");
         if (License[5])
-            license.push("BY-ND);
+            license.push("BY-ND");
         if (License[6])
             license.push("BY-NC-SA");
         if (License[7])
             license.push("BY-NC-ND");
 
-        SingleLinkList<String> source = new SingleLinkList<String>;
+        SingleLinkList<String> source = new SingleLinkList<String>();
         if (Source[0])
             source.push("animaldiversity");
         if (Source[1])
@@ -369,7 +369,7 @@ public class CCISController implements Initializable
         if (Source[43])
             source.push("WoRMS");
 
-        SingleLinkList<String> categories = new SingleLinkList<String>;
+        SingleLinkList<String> categories = new SingleLinkList<String>();
         if (ImageType[0])
             categories.push("photograph");
         if (ImageType[1])
@@ -377,7 +377,7 @@ public class CCISController implements Initializable
         if (ImageType[2])
             categories.push("digitized_artwork");
 
-        SingleLinkList<String> extension = new SingleLinkList<String>;
+        SingleLinkList<String> extension = new SingleLinkList<String>();
         if (FileType[0])
             extension.push("jpg");
         if (FileType[1])
@@ -387,7 +387,7 @@ public class CCISController implements Initializable
         if (FileType[3])
             extension.push("svg");
 
-        SingleLinkList<String> aspect_ratio = new SingleLinkList<String>;
+        SingleLinkList<String> aspect_ratio = new SingleLinkList<String>();
         if (Aspect[0])
             aspect_ratio.push("tall");
         if (Aspect[1])
@@ -395,7 +395,7 @@ public class CCISController implements Initializable
         if (Aspect[2])
             aspect_ratio.push("square");
 
-        SingleLinkList<String> size = new SingleLinkList<String>;
+        SingleLinkList<String> size = new SingleLinkList<String>();
         if (Size[0])
             size.push("small");
         if (Size[1])
@@ -403,13 +403,13 @@ public class CCISController implements Initializable
         if (Size[2])
             size.push("large");
 
-        if (model.getSearchResults(query, license_type, license, source, categories, extension, aspect_ratio, size, creator))
+        if (model.getSearchResults(query, license_type.toString(), license.toString(), source.toString(), categories.toString(), extension.toString(), aspect_ratio.toString(), size.toString(), Creator))
         {
-            GenericList<ImageResult> imageResults = getResults();
-            int numResult = imageResults.size();
+            GenericList<ImageResult> imageResults = model.getResults();
+            int numResults = imageResults.size();
             for (int i = 0; i < numResults; i++)
             {
-                floSearchResults.getChildren().add(imageResults.get(i));
+                floSearchResults.getChildren().add(imageResults.get(i).getRoot());
             }
         }
         else

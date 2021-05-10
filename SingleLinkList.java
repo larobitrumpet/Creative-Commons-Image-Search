@@ -58,12 +58,12 @@ public class SingleLinkList<T>
       }
       else
       {
-        String data = boxcar.data();
+        String data = boxcar.data().toString();
         s = data.toString();
         while ( boxcar.next() != null )
         {
           boxcar = boxcar.next();
-          data = boxcar.data();
+          data = boxcar.data().toString();
           s = s + "," + data.toString();
         }
       }
