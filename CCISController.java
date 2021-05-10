@@ -21,6 +21,8 @@ import javafx.scene.image.ImageView;
 
 public class CCISController implements Initializable
 {
+    private CCISModel model = new CCISModel();
+
     @FXML
     private CheckBox ckbCommercially;
     @FXML
@@ -169,6 +171,8 @@ public class CCISController implements Initializable
     @FXML
     private void btnSearchPressed(ActionEvent e)
     {
+        String query = txtSearch.getText();
+
         boolean[] Use = new boolean[2];
         boolean[] License = new boolean[8];
         boolean[] Source = new boolean[45];
@@ -398,6 +402,20 @@ public class CCISController implements Initializable
             size.push("medium");
         if (Size[2])
             size.push("large");
+
+        if (model.getSearchResults(query, license_type, license, source, categories, extension, aspect_ratio, size, creator))
+        {
+            GenericList<ImageResult> imageResults = getResults();
+            int numResult = imageResults.size();
+            for (int i = 0; i < numResults; i++)
+            {
+                floSearchResults.getChildren().add(imageResults.get(i));
+            }
+        }
+        else
+        {
+            //TODO
+        }
     }
 
     @Override

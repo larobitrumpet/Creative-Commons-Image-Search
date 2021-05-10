@@ -154,7 +154,7 @@ public class CCISModel
         return img;
     }
 
-    public getResults()
+    public GenericList<ImageResult> getResults()
     {
         return imageResults;
     }
