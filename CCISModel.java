@@ -14,7 +14,7 @@ import javafx.scene.image.Image;
 
 import com.google.gson.*;
 
-public class model
+public class CCISModel
 {
     private JsonElement jse = null;
     GenericList<ImageResult> imageResults = new GenericList<ImageResult>;

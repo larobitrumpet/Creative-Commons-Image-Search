@@ -11,11 +11,11 @@ import javafx.stage.Stage;
 /**
  * @author Luke Robillard
  */
-public class main extends Application {
+public class CCISMain extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("./view.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("./CCISView.fxml"));
         
         Scene scene = new Scene(root);
         

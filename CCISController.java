@@ -19,7 +19,7 @@ import javafx.scene.image.ImageView;
  * @author Luke Robillard
  */
 
-public class controller implements Initializable
+public class CCISController implements Initializable
 {
     @FXML
     private CheckBox ckbCommercially;
