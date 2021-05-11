@@ -1,8 +1,10 @@
 import java.io.BufferedReader;
 import java.io.InputStream;
+import java.io.Reader;
 import java.io.InputStreamReader;
 import java.net.URLEncoder;
 import java.net.URL;
+import java.net.HttpURLConnection;
 
 import javafx.scene.image.Image;
 
@@ -10,6 +12,7 @@ import com.google.gson.*;
 
 public class CCISModel
 {
+    private String authorization = "put brearer token here";
     private JsonElement jse = null;
     GenericList<ImageResult> imageResults = new GenericList<ImageResult>();
 
@@ -26,18 +29,14 @@ public class CCISModel
         try
         {
             String CCURLString = constructURL(query, license_type, license, source, categories, extension, aspect_ratio, size, creator);
-            URL CCURL = new URL(CCURLString);
+            String command = "curl -H \"Authorization: " + authorization + "\" " + CCURLString;
+            Process process = Runtime.getRuntime().exec(command);
+            BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
+            String s;
 
-            // Open the URL
-            InputStream is = CCURL.openStream(); // throws an IOException
-            BufferedReader br = new BufferedReader(new InputStreamReader(is));
+            jse = new JsonParser().parse(reader);
 
-            // Read the result into a JSON Element
-            jse = new JsonParser().parse(br);
-
-            // Close the connection
-            is.close();
-            br.close();
+            reader.close();
         }
         catch (java.io.FileNotFoundException fnfe)
         {
@@ -105,6 +104,7 @@ public class CCISModel
     public ImageResult constructResult(JsonObject result)
     {
         ImageResult img = new ImageResult();
+        System.out.println(result.getAsJsonObject().get("title").getAsString());
         img.setTitle(result.getAsJsonObject().get("title").getAsString());
         img.setImage(new Image(result.getAsJsonObject().get("url").getAsString()));
         String license = result.getAsJsonObject().get("license").getAsString();
