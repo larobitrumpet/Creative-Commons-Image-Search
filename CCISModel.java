@@ -103,55 +103,58 @@ public class CCISModel
 
     public ImageResult constructResult(JsonObject result)
     {
-        ImageResult img = new ImageResult();
-        System.out.println(result.getAsJsonObject().get("title").getAsString());
-        img.setTitle(result.getAsJsonObject().get("title").getAsString());
-        img.setImage(new Image(result.getAsJsonObject().get("url").getAsString()));
+        String title = result.getAsJsonObject().get("title").getAsString();
+        Image image = new Image(result.getAsJsonObject().get("url").getAsString());
         String license = result.getAsJsonObject().get("license").getAsString();
+        Image cc0 = null;
+        Image cc1 = null;
+        Image cc2 = null;
+        Image cc3 = null;
         switch (license)
         {
             case "cc0":
-                img.setCC0(CC);
-                img.setCC1(CC0);
+                cc0 = CC;
+                cc1 = CC0;
                 break;
             case "pdm":
-                img.setCC0(CC);
-                img.setCC1(PD);
+                cc0 = CC;
+                cc1 = PD;
                 break;
             case "by":
-                img.setCC0(CC);
-                img.setCC1(BY);
+                cc0 = CC;
+                cc1 = BY;
                 break;
             case "by-sa":
-                img.setCC0(CC);
-                img.setCC1(BY);
-                img.setCC2(SA);
+                cc0 = CC;
+                cc1 = BY;
+                cc2 = SA;
                 break;
             case "by-nc":
-                img.setCC0(CC);
-                img.setCC1(BY);
-                img.setCC2(NC);
+                cc0 = CC;
+                cc1 = BY;
+                cc2 = NC;
                 break;
             case "by-nd":
-                img.setCC0(CC);
-                img.setCC1(BY);
-                img.setCC2(ND);
+                cc0 = CC;
+                cc1 = BY;
+                cc2 = ND;
                 break;
             case "by-nc-sa":
-                img.setCC0(CC);
-                img.setCC1(BY);
-                img.setCC2(NC);
-                img.setCC3(SA);
+                cc0 = CC;
+                cc1 = BY;
+                cc2 = NC;
+                cc3 = SA;
                 break;
             case "by-nc-nd":
-                img.setCC0(CC);
-                img.setCC1(BY);
-                img.setCC2(NC);
-                img.setCC3(ND);
+                cc0 = CC;
+                cc1 = BY;
+                cc2 = NC;
+                cc3 = ND;
                 break;
             default:
                 break;
         }
+        ImageResult img = new ImageResult(image, cc0, cc1, cc2, cc3, title);
         return img;
     }
 

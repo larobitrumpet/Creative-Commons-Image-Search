@@ -11,15 +11,15 @@ public class ImageResult
     private Label lblTitle;
     private Button btnMore, btnDownload;
 
-    public void ImageResult()
+    public ImageResult(Image image, Image cc0, Image cc1, Image cc2, Image cc3, String title)
     {
         root = new GridPane();
-        imgImage = new ImageView();
-        imgCC0 = new ImageView();
-        imgCC1 = new ImageView();
-        imgCC2 = new ImageView();
-        imgCC3 = new ImageView();
-        lblTitle = new Label();
+        imgImage = new ImageView(image);
+        imgCC0 = new ImageView(cc0);
+        imgCC1 = new ImageView(cc1);
+        imgCC2 = new ImageView(cc2);
+        imgCC3 = new ImageView(cc3);
+        lblTitle = new Label(title);
         btnMore = new Button("More Info");
         btnDownload = new Button("Download");
 
