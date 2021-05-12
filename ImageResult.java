@@ -6,6 +6,7 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.FileChooser;
+import javafx.stage.FileChooser.ExtensionFilter;
 import javafx.stage.Stage;
 
 public class ImageResult
@@ -16,9 +17,11 @@ public class ImageResult
     private ImageView imgImage, imgCC0, imgCC1, imgCC2, imgCC3;
     private Label lblTitle;
     private Button btnMore, btnDownload;
+    private String imageURL;
 
-    public ImageResult(Image image, Image cc0, Image cc1, Image cc2, Image cc3, String title)
+    public ImageResult(Image image, Image cc0, Image cc1, Image cc2, Image cc3, String title, String imgURL)
     {
+        imageURL = imgURL;
         root = new GridPane();
         fileChooser = new FileChooser();
         imgImage = new ImageView(image);
@@ -52,8 +55,25 @@ public class ImageResult
     public void btnDownloadPressed(ActionEvent e)
     {
         stage = (Stage) root.getScene().getWindow();
+        fileChooser.setTitle("Download Image");
+        String fileName = getNameFromURL(imageURL);
+        String extension = getExtension(fileName);
+        fileChooser.getExtensionFilters().add(new ExtensionFilter("Image Files", "*." + extension));
+        fileChooser.setInitialFileName(fileName);
         File file = fileChooser.showSaveDialog(stage);
         System.out.println(file);
+    }
+
+    private String getNameFromURL(String URL)
+    {
+        String[] s = URL.split("/");
+        return s[s.length - 1];
+    }
+
+    private String getExtension(String file)
+    {
+        String[] s = file.split("/");
+        return s[s.length - 1];
     }
 
     public void setTitle(String title)

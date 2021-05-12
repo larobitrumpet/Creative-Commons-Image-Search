@@ -168,7 +168,7 @@ public class CCISModel
             default:
                 break;
         }
-        ImageResult img = new ImageResult(image, cc0, cc1, cc2, cc3, title);
+        ImageResult img = new ImageResult(image, cc0, cc1, cc2, cc3, title, imgURL);
         return img;
     }
 
