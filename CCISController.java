@@ -403,6 +403,7 @@ public class CCISController implements Initializable
         if (Size[2])
             size.push("large");
 
+        floSearchResults.getChildren().clear();
         if (model.getSearchResults(query, license_type.toString(), license.toString(), source.toString(), categories.toString(), extension.toString(), aspect_ratio.toString(), size.toString(), Creator))
         {
             GenericList<ImageResult> imageResults = model.getResults();

@@ -60,6 +60,7 @@ public class CCISModel
             // Build search results
             int numResults = Integer.parseInt(jse.getAsJsonObject().get("page_size").getAsString());
             JsonArray results = jse.getAsJsonObject().get("results").getAsJsonArray();
+            imageResults.clear();
             for (int i = 0; i < numResults; i++)
             {
                 imageResults.add(constructResult(results.get(i).getAsJsonObject()));
