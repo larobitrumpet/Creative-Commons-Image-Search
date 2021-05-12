@@ -32,7 +32,6 @@ public class CCISModel
             String command = "curl -H \"Authorization: " + authorization + "\" " + CCURLString;
             Process process = Runtime.getRuntime().exec(command);
             BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
-            String s;
 
             jse = new JsonParser().parse(reader);
 
@@ -105,7 +104,21 @@ public class CCISModel
     public ImageResult constructResult(JsonObject result)
     {
         String title = result.getAsJsonObject().get("title").getAsString();
-        Image image = new Image(result.getAsJsonObject().get("url").getAsString());
+
+        String imgURL = result.getAsJsonObject().get("url").getAsString();
+        String command = "curl " + imgURL;
+        Image image = null;
+        try
+        {
+            Process process = Runtime.getRuntime().exec(command);
+            InputStream imgStream = process.getInputStream();
+            image = new Image(imgStream);
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+
         String license = result.getAsJsonObject().get("license").getAsString();
         Image cc0 = null;
         Image cc1 = null;
