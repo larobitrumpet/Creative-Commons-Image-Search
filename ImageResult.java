@@ -1,11 +1,17 @@
+import java.io.File;
+import javafx.event.ActionEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.stage.FileChooser;
+import javafx.stage.Stage;
 
 public class ImageResult
 {
+    private Stage stage;
+    private FileChooser fileChooser;
     private GridPane root;
     private ImageView imgImage, imgCC0, imgCC1, imgCC2, imgCC3;
     private Label lblTitle;
@@ -14,6 +20,7 @@ public class ImageResult
     public ImageResult(Image image, Image cc0, Image cc1, Image cc2, Image cc3, String title)
     {
         root = new GridPane();
+        fileChooser = new FileChooser();
         imgImage = new ImageView(image);
         imgCC0 = new ImageView(cc0);
         imgCC1 = new ImageView(cc1);
@@ -33,11 +40,20 @@ public class ImageResult
         root.add(btnMore, 0, 2);
         root.add(btnDownload, 1, 2);
         root.setColumnSpan(btnDownload, 4);
+
+        btnDownload.setOnAction(e -> btnDownloadPressed(e));
     }
 
     public GridPane getRoot()
     {
         return root;
+    }
+
+    public void btnDownloadPressed(ActionEvent e)
+    {
+        stage = (Stage) root.getScene().getWindow();
+        File file = fileChooser.showSaveDialog(stage);
+        System.out.println(file);
     }
 
     public void setTitle(String title)
