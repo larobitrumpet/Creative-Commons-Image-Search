@@ -2,6 +2,9 @@ import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.Reader;
 import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.FileOutputStream;
+import java.io.File;
 import java.net.URLEncoder;
 import java.net.URL;
 import java.net.HttpURLConnection;
@@ -64,6 +67,33 @@ public class CCISModel
             {
                 imageResults.add(constructResult(results.get(i).getAsJsonObject()));
             }
+        }
+        return true;
+    }
+
+    public boolean downloadImage(File file, String URL)
+    {
+        String command = "curl " + URL;
+        try
+        {
+            Process process = Runtime.getRuntime().exec(command);
+            InputStream in = process.getInputStream();
+            OutputStream out = new FileOutputStream(file);
+
+            byte[] buffer = new byte[8 * 1024];
+            int bytesRead;
+            while ((bytesRead = in.read(buffer)) != -1)
+            {
+                out.write(buffer, 0, bytesRead);
+            }
+
+            in.close();
+            out.close();
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+            return false;
         }
         return true;
     }

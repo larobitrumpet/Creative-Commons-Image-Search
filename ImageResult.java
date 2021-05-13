@@ -54,6 +54,7 @@ public class ImageResult
 
     public void btnDownloadPressed(ActionEvent e)
     {
+        CCISModel model = new CCISModel();
         stage = (Stage) root.getScene().getWindow();
         fileChooser.setTitle("Download Image");
         String fileName = getNameFromURL(imageURL);
@@ -61,7 +62,10 @@ public class ImageResult
         fileChooser.getExtensionFilters().add(new ExtensionFilter("Image Files", "*." + extension));
         fileChooser.setInitialFileName(fileName);
         File file = fileChooser.showSaveDialog(stage);
-        System.out.println(file);
+        if (file != null)
+        {
+            model.downloadImage(file, imageURL);
+        }
     }
 
     private String getNameFromURL(String URL)
