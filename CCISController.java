@@ -408,9 +408,16 @@ public class CCISController implements Initializable
         {
             GenericList<ImageResult> imageResults = model.getResults();
             int numResults = imageResults.size();
-            for (int i = 0; i < numResults; i++)
+            if (numResults > 0)
             {
-                floSearchResults.getChildren().add(imageResults.get(i).getRoot());
+                for (int i = 0; i < numResults; i++)
+                {
+                    floSearchResults.getChildren().add(imageResults.get(i).getRoot());
+                }
+            }
+            else
+            {
+                floSearchResults.getChildren().add(new Label("No Images :(\nSorry, I couldn't find anything for that query"));
             }
         }
         else
