@@ -36,7 +36,7 @@
             <Label fx:id="lblLicense" text="license" GridPane.columnIndex="2" GridPane.rowIndex="3" />
             <Label text="Attribution:" GridPane.columnIndex="1" GridPane.rowIndex="4" />
             <Label fx:id="lblAttribution" text="attribution" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-            <Button fx:id="btnDownload" mnemonicParsing="false" text="Download" GridPane.rowIndex="4" />
+            <Button fx:id="btnDownload" mnemonicParsing="false" onAction="#btnDownloadPressed" text="Download" GridPane.rowIndex="4" />
          </children>
       </GridPane>
    </children>

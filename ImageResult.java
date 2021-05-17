@@ -85,7 +85,7 @@ public class ImageResult
             stage.setScene(new Scene(root1));
 
             CCISMoreController controller = fxmlLoader.getController();
-            controller.initData(id);
+            controller.initData(stage, id);
 
             stage.show();
         }
