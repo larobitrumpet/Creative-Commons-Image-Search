@@ -13,6 +13,8 @@ public class CCISMoreController implements Initializable
 {
     private CCISModel model = new CCISModel();
 
+    private String id;
+
     @FXML
     private Label lblTitle;
     @FXML
@@ -27,4 +29,15 @@ public class CCISMoreController implements Initializable
     private ImageView imgImage;
     @FXML
     private Button btnDownload;
+
+    public void initData(String imgId)
+    {
+        id = imgId;
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle rb)
+    {
+        //TODO
+    }
 }
