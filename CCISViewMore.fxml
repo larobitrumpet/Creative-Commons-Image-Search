@@ -28,12 +28,12 @@
             <ImageView fx:id="imgImage" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.rowSpan="4" />
             <Label fx:id="lblTitle" text="image title" GridPane.columnIndex="2" />
             <Label text="Creator:" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Hyperlink fx:id="hylCratorURL" text="creator URL" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Hyperlink fx:id="hypCreatorURL" text="creator URL" GridPane.columnIndex="2" GridPane.rowIndex="2" />
             <Label text="Title:" GridPane.columnIndex="1" />
             <Label fx:id="lblName" text="creator name" GridPane.columnIndex="2" GridPane.rowIndex="1" />
             <Label text="Creator URL:" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <Label text="Licence:" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <Label fx:id="lblLicence" text="licence" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Label text="License:" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label fx:id="lblLicense" text="license" GridPane.columnIndex="2" GridPane.rowIndex="3" />
             <Label text="Attribution:" GridPane.columnIndex="1" GridPane.rowIndex="4" />
             <Label fx:id="lblAttribution" text="attribution" GridPane.columnIndex="2" GridPane.rowIndex="4" />
             <Button fx:id="btnDownload" mnemonicParsing="false" text="Download" GridPane.rowIndex="4" />

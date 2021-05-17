@@ -20,9 +20,9 @@ public class CCISMoreController implements Initializable
     @FXML
     private Label lblName;
     @FXML
-    private Hyperlink hylCratorURL;
+    private Hyperlink hypCreatorURL;
     @FXML
-    private Label lblLicence;
+    private Label lblLicense;
     @FXML
     private Label lblAttribution;
     @FXML
@@ -36,6 +36,12 @@ public class CCISMoreController implements Initializable
         if (model.getImageDetail(id))
         {
             String[] details = model.getDetails();
+            lblTitle.setText(details[0]);
+            lblName.setText(details[1]);
+            hypCreatorURL.setText(details[2]);
+            lblLicense.setText(details[3]);
+            lblAttribution.setText(details[4]);
+            imgImage.setImage(new Image(details[5]));
         }
     }
 
