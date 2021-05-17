@@ -33,6 +33,10 @@ public class CCISMoreController implements Initializable
     public void initData(String imgId)
     {
         id = imgId;
+        if (model.getImageDetail(id))
+        {
+            String[] details = model.getDetails();
+        }
     }
 
     @Override

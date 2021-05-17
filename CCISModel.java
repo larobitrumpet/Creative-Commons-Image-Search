@@ -18,6 +18,7 @@ public class CCISModel
     private String authorization = "put brearer token here";
     private JsonElement jse = null;
     GenericList<ImageResult> imageResults = new GenericList<ImageResult>();
+    String[] imageDetails = new String[6];
 
     private Image CC = new Image("cc_images/26px-Cc.logo.circle.svg.png");
     private Image CC0 = new Image("cc_images/26px-Cc-zero.svg.png");
@@ -67,6 +68,48 @@ public class CCISModel
             {
                 imageResults.add(constructResult(results.get(i).getAsJsonObject()));
             }
+        }
+        return true;
+    }
+
+    public boolean getImageDetail(String id)
+    {
+        try
+        {
+            String CCURLString = "http://api.creativecommons.engineering/v1/images/" + id + "?format=json";
+            String command = "curl -H \"Authorization: " + authorization + "\" " + CCURLString;
+            Process process = Runtime.getRuntime().exec(command);
+            BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
+
+            jse = new JsonParser().parse(reader);
+
+            reader.close();
+        }
+        catch (java.io.FileNotFoundException fnfe)
+        {
+            return false;
+        }
+        catch (java.io.UnsupportedEncodingException uee)
+        {
+            uee.printStackTrace();
+        }
+        catch (java.net.MalformedURLException mue)
+        {
+            mue.printStackTrace();
+        }
+        catch (java.io.IOException ioe)
+        {
+            ioe.printStackTrace();
+        }
+
+        if (jse != null)
+        {
+            imageDetails[0] = jse.getAsJsonObject().get("title").getAsString();
+            imageDetails[1] = jse.getAsJsonObject().get("creator").getAsString();
+            imageDetails[2] = jse.getAsJsonObject().get("creator_url").getAsString();
+            imageDetails[3] = "CC " + jse.getAsJsonObject().get("license").getAsString().toUpperCase() + " " + jse.getAsJsonObject().get("license_version").getAsString();
+            imageDetails[4] = jse.getAsJsonObject().get("attribution").getAsString();
+            imageDetails[5] = jse.getAsJsonObject().get("url").getAsString();
         }
         return true;
     }
@@ -206,5 +249,10 @@ public class CCISModel
     public GenericList<ImageResult> getResults()
     {
         return imageResults;
+    }
+
+    public String[] getDetails()
+    {
+        return imageDetails;
     }
 }
