@@ -134,6 +134,7 @@ public class CCISModel
     public ImageResult constructResult(JsonObject result)
     {
         String title = result.getAsJsonObject().get("title").getAsString();
+        String id = result.getAsJsonObject().get("id").getAsString();
 
         String imgURL = result.getAsJsonObject().get("url").getAsString();
         String command = "curl " + imgURL;
@@ -198,7 +199,7 @@ public class CCISModel
             default:
                 break;
         }
-        ImageResult img = new ImageResult(image, cc0, cc1, cc2, cc3, title, imgURL);
+        ImageResult img = new ImageResult(image, cc0, cc1, cc2, cc3, title, imgURL, id);
         return img;
     }
 

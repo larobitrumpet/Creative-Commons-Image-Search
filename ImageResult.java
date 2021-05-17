@@ -22,10 +22,12 @@ public class ImageResult
     private Label lblTitle;
     private Button btnMore, btnDownload;
     private String imageURL;
+    private String id;
 
-    public ImageResult(Image image, Image cc0, Image cc1, Image cc2, Image cc3, String title, String imgURL)
+    public ImageResult(Image image, Image cc0, Image cc1, Image cc2, Image cc3, String title, String imgURL, String imgId)
     {
         imageURL = imgURL;
+        id = imgId;
         root = new GridPane();
         fileChooser = new FileChooser();
         imgImage = new ImageView(image);
