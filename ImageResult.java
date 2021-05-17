@@ -7,6 +7,10 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.FileChooser;
 import javafx.stage.FileChooser.ExtensionFilter;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class ImageResult
@@ -45,6 +49,7 @@ public class ImageResult
         root.setColumnSpan(btnDownload, 4);
 
         btnDownload.setOnAction(e -> btnDownloadPressed(e));
+        btnMore.setOnAction(e -> btnMorePressed(e));
     }
 
     public GridPane getRoot()
@@ -65,6 +70,22 @@ public class ImageResult
         if (file != null)
         {
             model.downloadImage(file, imageURL);
+        }
+    }
+
+    public void btnMorePressed(ActionEvent e)
+    {
+        try
+        {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("./CCISViewMore.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root1));
+            stage.show();
+        }
+        catch(Exception ex)
+        {
+            ex.printStackTrace();
         }
     }
 
