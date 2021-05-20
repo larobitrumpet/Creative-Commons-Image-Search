@@ -27,6 +27,7 @@ public class CCISModel
     private Image SA = new Image("cc_images/26px-Cc-sa.svg.png");
     private Image NC = new Image("cc_images/26px-Cc-nc.svg.png");
     private Image ND = new Image("cc_images/26px-Cc-nd.svg.png");
+    private Image error = new Image("imageerror.png");
 
     public boolean getSearchResults(String query, String license_type, String license, String source, String categories, String extension, String aspect_ratio, String size, boolean creator)
     {
@@ -183,17 +184,22 @@ public class CCISModel
         String id = result.getAsJsonObject().get("id").getAsString();
 
         String imgURL = result.getAsJsonObject().get("url").getAsString();
-        String command = "curl " + imgURL;
-        Image image = null;
+        String thumbURL = result.getAsJsonObject().get("thumbnail").getAsString();
+        String command = "curl " + thumbURL;
+        Image image = error;
         try
         {
             Process process = Runtime.getRuntime().exec(command);
             InputStream imgStream = process.getInputStream();
             image = new Image(imgStream);
         }
-        catch (Exception e)
+        catch(java.lang.Throwable e)
         {
             e.printStackTrace();
+        }
+        if (image.getException() != null)
+        {
+            image = error;
         }
 
         String license = result.getAsJsonObject().get("license").getAsString();
