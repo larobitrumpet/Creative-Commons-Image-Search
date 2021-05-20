@@ -193,7 +193,7 @@ public class CCISModel
             InputStream imgStream = process.getInputStream();
             image = new Image(imgStream);
         }
-        catch(java.lang.Throwable e)
+        catch(Exception e)
         {
             e.printStackTrace();
         }
