@@ -20,14 +20,14 @@ public class CCISModel
     GenericList<ImageResult> imageResults = new GenericList<ImageResult>();
     String[] imageDetails = new String[6];
 
-    private Image CC = new Image("cc_images/26px-Cc.logo.circle.svg.png");
-    private Image CC0 = new Image("cc_images/26px-Cc-zero.svg.png");
-    private Image PD = new Image("cc_images/26px-PD-icon-black.svg.png");
-    private Image BY = new Image("cc_images/26px-Cc-by_new.svg.png");
-    private Image SA = new Image("cc_images/26px-Cc-sa.svg.png");
-    private Image NC = new Image("cc_images/26px-Cc-nc.svg.png");
-    private Image ND = new Image("cc_images/26px-Cc-nd.svg.png");
-    private Image error = new Image("imageerror.png");
+    private Image CC = new Image("./26px-Cc.logo.circle.svg.png");
+    private Image CC0 = new Image("./26px-Cc-zero.svg.png");
+    private Image PD = new Image("./26px-PD-icon-black.svg.png");
+    private Image BY = new Image("./26px-Cc-by_new.svg.png");
+    private Image SA = new Image("./26px-Cc-sa.svg.png");
+    private Image NC = new Image("./26px-Cc-nc.svg.png");
+    private Image ND = new Image("./26px-Cc-nd.svg.png");
+    private Image error = new Image("./imageerror.png");
 
     public boolean getSearchResults(String query, String license_type, String license, String source, String categories, String extension, String aspect_ratio, String size, boolean creator)
     {
