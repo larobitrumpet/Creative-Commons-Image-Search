@@ -199,6 +199,20 @@ public class CCISModel
         }
         if (image.getException() != null)
         {
+            command = "curl " + imgURL;
+            try
+            {
+                Process process = Runtime.getRuntime().exec(command);
+                InputStream imgStream = process.getInputStream();
+                image = new Image(imgStream);
+            }
+            catch(Exception e)
+            {
+                e.printStackTrace();
+            }
+        }
+        if (image.getException() != null)
+        {
             image = error;
         }
 
