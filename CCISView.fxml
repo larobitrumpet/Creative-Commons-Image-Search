@@ -63,124 +63,124 @@
                                     <CheckBox fx:id="ckbCC0" mnemonicParsing="false" text="CC0" />
                                     <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
                                        <image>
-                                          <Image url="@cc_images/26px-Cc.logo.circle.svg.png" />
+                                          <Image url="@26px-Cc.logo.circle.svg.png" />
                                        </image>
                                     </ImageView>
                                     <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
                                        <image>
-                                          <Image url="@cc_images/26px-Cc-zero.svg.png" />
+                                          <Image url="@26px-Cc-zero.svg.png" />
                                        </image>
                                     </ImageView>
                                     <CheckBox fx:id="ckbPublicDomain" mnemonicParsing="false" text="Public Domain Mark" GridPane.rowIndex="1" />
                                     <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                        <image>
-                                          <Image url="@cc_images/26px-Cc.logo.circle.svg.png" />
+                                          <Image url="@26px-Cc.logo.circle.svg.png" />
                                        </image>
                                     </ImageView>
                                     <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
                                        <image>
-                                          <Image url="@cc_images/26px-PD-icon-black.svg.png" />
+                                          <Image url="@26px-PD-icon-black.svg.png" />
                                        </image>
                                     </ImageView>
                                     <CheckBox fx:id="ckbBY" mnemonicParsing="false" text="BY" GridPane.rowIndex="2" />
                                     <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
                                        <image>
-                                          <Image url="@cc_images/26px-Cc.logo.circle.svg.png" />
+                                          <Image url="@26px-Cc.logo.circle.svg.png" />
                                        </image>
                                     </ImageView>
                                     <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
                                        <image>
-                                          <Image url="@cc_images/26px-Cc-by_new.svg.png" />
+                                          <Image url="@26px-Cc-by_new.svg.png" />
                                        </image>
                                     </ImageView>
                                     <CheckBox fx:id="ckbBY_SA" mnemonicParsing="false" text="BY-SA" GridPane.rowIndex="3" />
                                     <ImageView fitHeight="150.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
                                        <image>
-                                          <Image url="@cc_images/26px-Cc.logo.circle.svg.png" />
+                                          <Image url="@26px-Cc.logo.circle.svg.png" />
                                        </image>
                                     </ImageView>
                                     <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="3">
                                        <image>
-                                          <Image url="@cc_images/26px-Cc-by_new.svg.png" />
+                                          <Image url="@26px-Cc-by_new.svg.png" />
                                        </image>
                                     </ImageView>
                                     <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="3">
                                        <image>
-                                          <Image url="@cc_images/26px-Cc-sa.svg.png" />
+                                          <Image url="@26px-Cc-sa.svg.png" />
                                        </image>
                                     </ImageView>
                                     <CheckBox fx:id="ckbBY_NC" mnemonicParsing="false" text="BY-NC" GridPane.rowIndex="4" />
                                     <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
                                        <image>
-                                          <Image url="@cc_images/26px-Cc.logo.circle.svg.png" />
+                                          <Image url="@26px-Cc.logo.circle.svg.png" />
                                        </image>
                                     </ImageView>
                                     <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="4">
                                        <image>
-                                          <Image url="@cc_images/26px-Cc-by_new.svg.png" />
+                                          <Image url="@26px-Cc-by_new.svg.png" />
                                        </image>
                                     </ImageView>
                                     <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="4">
                                        <image>
-                                          <Image url="@cc_images/26px-Cc-nc.svg.png" />
+                                          <Image url="@26px-Cc-nc.svg.png" />
                                        </image>
                                     </ImageView>
                                     <CheckBox fx:id="ckbBY_ND" mnemonicParsing="false" text="BY-ND" GridPane.rowIndex="5" />
                                     <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="5">
                                        <image>
-                                          <Image url="@cc_images/26px-Cc.logo.circle.svg.png" />
+                                          <Image url="@26px-Cc.logo.circle.svg.png" />
                                        </image>
                                     </ImageView>
                                     <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="5">
                                        <image>
-                                          <Image url="@cc_images/26px-Cc-by_new.svg.png" />
+                                          <Image url="@26px-Cc-by_new.svg.png" />
                                        </image>
                                     </ImageView>
                                     <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="5">
                                        <image>
-                                          <Image url="@cc_images/26px-Cc-nd.svg.png" />
+                                          <Image url="@26px-Cc-nd.svg.png" />
                                        </image>
                                     </ImageView>
                                     <CheckBox fx:id="ckbBY_NC_SA" mnemonicParsing="false" text="BY-NC-SA" GridPane.rowIndex="6" />
                                     <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="6">
                                        <image>
-                                          <Image url="@cc_images/26px-Cc.logo.circle.svg.png" />
+                                          <Image url="@26px-Cc.logo.circle.svg.png" />
                                        </image>
                                     </ImageView>
                                     <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="6">
                                        <image>
-                                          <Image url="@cc_images/26px-Cc-by_new.svg.png" />
+                                          <Image url="@26px-Cc-by_new.svg.png" />
                                        </image>
                                     </ImageView>
                                     <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="6">
                                        <image>
-                                          <Image url="@cc_images/26px-Cc-nc.svg.png" />
+                                          <Image url="@26px-Cc-nc.svg.png" />
                                        </image>
                                     </ImageView>
                                     <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="6">
                                        <image>
-                                          <Image url="@cc_images/26px-Cc-sa.svg.png" />
+                                          <Image url="@26px-Cc-sa.svg.png" />
                                        </image>
                                     </ImageView>
                                     <CheckBox fx:id="ckbBY_NC_ND" mnemonicParsing="false" text="BY-NC-ND" GridPane.rowIndex="7" />
                                     <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="7">
                                        <image>
-                                          <Image url="@cc_images/26px-Cc.logo.circle.svg.png" />
+                                          <Image url="@26px-Cc.logo.circle.svg.png" />
                                        </image>
                                     </ImageView>
                                     <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="7">
                                        <image>
-                                          <Image url="@cc_images/26px-Cc-by_new.svg.png" />
+                                          <Image url="@26px-Cc-by_new.svg.png" />
                                        </image>
                                     </ImageView>
                                     <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="7">
                                        <image>
-                                          <Image url="@cc_images/26px-Cc-nc.svg.png" />
+                                          <Image url="@26px-Cc-nc.svg.png" />
                                        </image>
                                     </ImageView>
                                     <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="7">
                                        <image>
-                                          <Image url="@cc_images/26px-Cc-nd.svg.png" />
+                                          <Image url="@26px-Cc-nd.svg.png" />
                                        </image>
                                     </ImageView>
                                  </children>
