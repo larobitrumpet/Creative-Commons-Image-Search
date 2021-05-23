@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
@@ -13,8 +14,8 @@
    <children>
       <GridPane prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
         </columnConstraints>
         <rowConstraints>
@@ -36,7 +37,10 @@
             <Label fx:id="lblLicense" text="license" GridPane.columnIndex="2" GridPane.rowIndex="3" />
             <Label text="Attribution:" GridPane.columnIndex="1" GridPane.rowIndex="4" />
             <Label fx:id="lblAttribution" text="attribution" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-            <Button fx:id="btnDownload" mnemonicParsing="false" onAction="#btnDownloadPressed" text="Download" GridPane.rowIndex="4" />
+            <Button fx:id="btnDownload" mnemonicParsing="false" onAction="#btnDownloadPressed" text="Download" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="8.0" />
+               </GridPane.margin></Button>
          </children>
       </GridPane>
    </children>
