@@ -173,6 +173,12 @@ public class CCISController implements Initializable
     {
         String query = txtSearch.getText();
 
+        if (query.equals(""))
+        {
+            floSearchResults.getChildren().add(new Label("Please enter a query."));
+            return;
+        }
+
         boolean[] Use = new boolean[2];
         boolean[] License = new boolean[8];
         boolean[] Source = new boolean[45];
