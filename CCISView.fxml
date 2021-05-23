@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Accordion?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
@@ -29,8 +30,14 @@
                            <children>
                               <VBox prefHeight="189.0" prefWidth="172.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <children>
-                                    <CheckBox fx:id="ckbCommercially" mnemonicParsing="false" text="Use commercially" />
-                                    <CheckBox fx:id="ckbModify" mnemonicParsing="false" text="Modify or adapt" />
+                                    <CheckBox fx:id="ckbCommercially" mnemonicParsing="false" text="Use commercially">
+                                       <padding>
+                                          <Insets top="3.0" />
+                                       </padding></CheckBox>
+                                    <CheckBox fx:id="ckbModify" mnemonicParsing="false" text="Modify or adapt">
+                                       <padding>
+                                          <Insets top="3.0" />
+                                       </padding></CheckBox>
                                  </children>
                               </VBox>
                            </children>
@@ -195,55 +202,199 @@
                            <children>
                               <ScrollPane prefHeight="989.0" prefWidth="353.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                 <content>
-                                  <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefWidth="325.0">
+                                  <AnchorPane minHeight="-Infinity" minWidth="600.0">
                                        <children>
                                           <VBox prefHeight="589.0" prefWidth="473.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                              <children>
-                                                <CheckBox fx:id="ckbADW" mnemonicParsing="false" text="Animal Diversity Web" wrapText="true" />
-                                                <CheckBox fx:id="ckbBHL" mnemonicParsing="false" text="Biodiversity Heritage Library" wrapText="true" />
-                                                <CheckBox fx:id="ckbBM" mnemonicParsing="false" text="Brooklyn Museum" wrapText="true" />
-                                                <CheckBox fx:id="ckbCAPL" mnemonicParsing="false" text="Culturally Authentic Pictorial Lexicon" wrapText="true" />
-                                                <CheckBox fx:id="ckbCMA" mnemonicParsing="false" text="Cleveland Museum of Art" wrapText="true" />
-                                                <CheckBox fx:id="ckbDA" mnemonicParsing="false" text="DeviantArt" wrapText="true" />
-                                                <CheckBox fx:id="ckbDM" mnemonicParsing="false" text="Digitalt Museum" wrapText="true" />
-                                                <CheckBox fx:id="ckbE" mnemonicParsing="false" text="Europeana" wrapText="true" />
-                                                <CheckBox fx:id="ckbF" mnemonicParsing="false" text="Flickr" wrapText="true" />
-                                                <CheckBox fx:id="ckbFO" mnemonicParsing="false" text="Flora-On" wrapText="true" />
-                                                <CheckBox fx:id="ckbGBI" mnemonicParsing="false" text="Geograph Britain and Ireland" wrapText="true" />
-                                                <CheckBox fx:id="ckbMCM" mnemonicParsing="false" text="McCord Museum" wrapText="true" />
-                                                <CheckBox fx:id="ckbMMA" mnemonicParsing="false" text="Metropolitan Museum of Art" wrapText="true" />
-                                                <CheckBox fx:id="ckbMV" mnemonicParsing="false" text="Museums Victoria" wrapText="true" />
-                                                <CheckBox fx:id="ckbNASA" mnemonicParsing="false" text="NASA" wrapText="true" />
-                                                <CheckBox fx:id="ckbNYPL" mnemonicParsing="false" text="New York Public Library" wrapText="true" />
-                                                <CheckBox fx:id="ckbPP" mnemonicParsing="false" text="PhyloPic" wrapText="true" />
-                                                <CheckBox fx:id="ckbR" mnemonicParsing="false" text="Rawpixel" wrapText="true" />
-                                                <CheckBox fx:id="ckbRM" mnemonicParsing="false" text="Rijksmuseum" wrapText="true" />
-                                                <CheckBox fx:id="ckbSM" mnemonicParsing="false" text="Science Museum – UK" wrapText="true" />
-                                                <CheckBox fx:id="ckbS" mnemonicParsing="false" text="Sketchfab" wrapText="true" />
-                                                <CheckBox fx:id="ckbSINMAAHC" mnemonicParsing="false" text="Smithsonian Institution: National Museum of African American History and Culture" wrapText="true" />
-                                                <CheckBox fx:id="ckbSINMAA" mnemonicParsing="false" text="Smithsonian Institution: National Museum of African Art" wrapText="true" />
-                                                <CheckBox fx:id="ckbSINASM" mnemonicParsing="false" text="Smithsonian Institution: National Air and Space Museum" wrapText="true" />
-                                                <CheckBox fx:id="ckbSISAAM" mnemonicParsing="false" text="Smithsonian Institution: Smithsonian American Art Museum" wrapText="true" />
-                                                <CheckBox fx:id="ckbSINMAH" mnemonicParsing="false" text="Smithsonian Institution: National Museum of American History" wrapText="true" />
-                                                <CheckBox fx:id="ckbSINMAI" mnemonicParsing="false" text="Smithsonian Institution: National Museum of the American Indian" wrapText="true" />
-                                                <CheckBox fx:id="ckbSIACM" mnemonicParsing="false" text="Smithsonian Institution: Anacostia Community Museum" wrapText="true" />
-                                                <CheckBox fx:id="ckbSICHSDM" mnemonicParsing="false" text="Smithsonian Institution: Cooper Hewitt, Smithsonian Design Museum" wrapText="true" />
-                                                <CheckBox fx:id="ckbSIFGA" mnemonicParsing="false" text="Smithsonian Institution: Freer Gallery of Art" wrapText="true" />
-                                                <CheckBox fx:id="ckbSISG" mnemonicParsing="false" text="Smithsonian Institution: Smithsonian Gardens" wrapText="true" />
-                                                <CheckBox fx:id="ckbSIHMSG" mnemonicParsing="false" text="Smithsonian Institution: Hirshhorn Museum and Sculpture Garden" wrapText="true" />
-                                                <CheckBox fx:id="ckbSIA" mnemonicParsing="false" text="Smithsonian Institution Archives" wrapText="true" />
-                                                <CheckBox fx:id="ckbSISL" mnemonicParsing="false" text="Smithsonian Institution: Smithsonian Libraries" wrapText="true" />
-                                                <CheckBox fx:id="ckbSINMNH" mnemonicParsing="false" text="Smithsonian Institution: National Museum of Natural History" wrapText="true" />
-                                                <CheckBox fx:id="ckbSINPG" mnemonicParsing="false" text="Smithsonian Institution: National Portrait Gallery" wrapText="true" />
-                                                <CheckBox fx:id="ckbSINPM" mnemonicParsing="false" text="Smithsonian Institution: National Postal Museum" />
-                                                <CheckBox fx:id="ckbSINZ" mnemonicParsing="false" text="Smithsonian Institution: National Zoo" />
-                                                <CheckBox fx:id="ckbSX" mnemonicParsing="false" text="SpaceX" />
-                                                <CheckBox fx:id="ckbSVGS" mnemonicParsing="false" text="SVG Silh" />
-                                                <CheckBox fx:id="ckbT" mnemonicParsing="false" text="Thingiverse" />
-                                                <CheckBox fx:id="ckbTM" mnemonicParsing="false" text="Thorvaldsens Museum" />
-                                                <CheckBox fx:id="ckbWC" mnemonicParsing="false" text="Wikimedia Commons" />
-                                                <CheckBox fx:id="ckbWOCTC" mnemonicParsing="false" text="WOCinTech Chat" />
-                                                <CheckBox fx:id="ckbWRMS" mnemonicParsing="false" text="World Register of Marine Species" />
+                                                <CheckBox fx:id="ckbADW" mnemonicParsing="false" text="Animal Diversity Web" wrapText="true">
+                                                   <VBox.margin>
+                                                      <Insets />
+                                                   </VBox.margin>
+                                                   <padding>
+                                                      <Insets top="3.0" />
+                                                   </padding></CheckBox>
+                                                <CheckBox fx:id="ckbBHL" mnemonicParsing="false" text="Biodiversity Heritage Library" wrapText="true">
+                                                   <padding>
+                                                      <Insets top="3.0" />
+                                                   </padding></CheckBox>
+                                                <CheckBox fx:id="ckbBM" mnemonicParsing="false" text="Brooklyn Museum" wrapText="true">
+                                                   <padding>
+                                                      <Insets top="3.0" />
+                                                   </padding></CheckBox>
+                                                <CheckBox fx:id="ckbCAPL" mnemonicParsing="false" text="Culturally Authentic Pictorial Lexicon" wrapText="true">
+                                                   <padding>
+                                                      <Insets top="3.0" />
+                                                   </padding></CheckBox>
+                                                <CheckBox fx:id="ckbCMA" mnemonicParsing="false" text="Cleveland Museum of Art" wrapText="true">
+                                                   <padding>
+                                                      <Insets top="3.0" />
+                                                   </padding></CheckBox>
+                                                <CheckBox fx:id="ckbDA" mnemonicParsing="false" text="DeviantArt" wrapText="true">
+                                                   <padding>
+                                                      <Insets top="3.0" />
+                                                   </padding></CheckBox>
+                                                <CheckBox fx:id="ckbDM" mnemonicParsing="false" text="Digitalt Museum" wrapText="true">
+                                                   <padding>
+                                                      <Insets top="3.0" />
+                                                   </padding></CheckBox>
+                                                <CheckBox fx:id="ckbE" mnemonicParsing="false" text="Europeana" wrapText="true">
+                                                   <padding>
+                                                      <Insets top="3.0" />
+                                                   </padding></CheckBox>
+                                                <CheckBox fx:id="ckbF" mnemonicParsing="false" text="Flickr" wrapText="true">
+                                                   <padding>
+                                                      <Insets top="3.0" />
+                                                   </padding></CheckBox>
+                                                <CheckBox fx:id="ckbFO" mnemonicParsing="false" text="Flora-On" wrapText="true">
+                                                   <padding>
+                                                      <Insets top="3.0" />
+                                                   </padding></CheckBox>
+                                                <CheckBox fx:id="ckbGBI" mnemonicParsing="false" text="Geograph Britain and Ireland" wrapText="true">
+                                                   <padding>
+                                                      <Insets top="3.0" />
+                                                   </padding></CheckBox>
+                                                <CheckBox fx:id="ckbMCM" mnemonicParsing="false" text="McCord Museum" wrapText="true">
+                                                   <padding>
+                                                      <Insets top="3.0" />
+                                                   </padding></CheckBox>
+                                                <CheckBox fx:id="ckbMMA" mnemonicParsing="false" text="Metropolitan Museum of Art" wrapText="true">
+                                                   <padding>
+                                                      <Insets top="3.0" />
+                                                   </padding></CheckBox>
+                                                <CheckBox fx:id="ckbMV" mnemonicParsing="false" text="Museums Victoria" wrapText="true">
+                                                   <padding>
+                                                      <Insets top="3.0" />
+                                                   </padding></CheckBox>
+                                                <CheckBox fx:id="ckbNASA" mnemonicParsing="false" text="NASA" wrapText="true">
+                                                   <padding>
+                                                      <Insets top="3.0" />
+                                                   </padding></CheckBox>
+                                                <CheckBox fx:id="ckbNYPL" mnemonicParsing="false" text="New York Public Library" wrapText="true">
+                                                   <padding>
+                                                      <Insets top="3.0" />
+                                                   </padding></CheckBox>
+                                                <CheckBox fx:id="ckbPP" mnemonicParsing="false" text="PhyloPic" wrapText="true">
+                                                   <padding>
+                                                      <Insets top="3.0" />
+                                                   </padding></CheckBox>
+                                                <CheckBox fx:id="ckbR" mnemonicParsing="false" text="Rawpixel" wrapText="true">
+                                                   <padding>
+                                                      <Insets top="3.0" />
+                                                   </padding></CheckBox>
+                                                <CheckBox fx:id="ckbRM" mnemonicParsing="false" text="Rijksmuseum" wrapText="true">
+                                                   <VBox.margin>
+                                                      <Insets />
+                                                   </VBox.margin>
+                                                   <padding>
+                                                      <Insets top="3.0" />
+                                                   </padding></CheckBox>
+                                                <CheckBox fx:id="ckbSM" mnemonicParsing="false" text="Science Museum – UK" wrapText="true">
+                                                   <padding>
+                                                      <Insets top="3.0" />
+                                                   </padding></CheckBox>
+                                                <CheckBox fx:id="ckbS" mnemonicParsing="false" text="Sketchfab" wrapText="true">
+                                                   <padding>
+                                                      <Insets top="3.0" />
+                                                   </padding></CheckBox>
+                                                <CheckBox fx:id="ckbSINMAAHC" mnemonicParsing="false" text="Smithsonian Institution: National Museum of African American History and Culture" wrapText="true">
+                                                   <padding>
+                                                      <Insets top="3.0" />
+                                                   </padding></CheckBox>
+                                                <CheckBox fx:id="ckbSINMAA" mnemonicParsing="false" text="Smithsonian Institution: National Museum of African Art" wrapText="true">
+                                                   <padding>
+                                                      <Insets top="3.0" />
+                                                   </padding></CheckBox>
+                                                <CheckBox fx:id="ckbSINASM" mnemonicParsing="false" text="Smithsonian Institution: National Air and Space Museum" wrapText="true">
+                                                   <padding>
+                                                      <Insets top="3.0" />
+                                                   </padding></CheckBox>
+                                                <CheckBox fx:id="ckbSISAAM" mnemonicParsing="false" text="Smithsonian Institution: Smithsonian American Art Museum" wrapText="true">
+                                                   <VBox.margin>
+                                                      <Insets />
+                                                   </VBox.margin>
+                                                   <padding>
+                                                      <Insets top="3.0" />
+                                                   </padding></CheckBox>
+                                                <CheckBox fx:id="ckbSINMAH" mnemonicParsing="false" text="Smithsonian Institution: National Museum of American History" wrapText="true">
+                                                   <padding>
+                                                      <Insets top="3.0" />
+                                                   </padding></CheckBox>
+                                                <CheckBox fx:id="ckbSINMAI" mnemonicParsing="false" text="Smithsonian Institution: National Museum of the American Indian" wrapText="true">
+                                                   <padding>
+                                                      <Insets top="3.0" />
+                                                   </padding></CheckBox>
+                                                <CheckBox fx:id="ckbSIACM" mnemonicParsing="false" text="Smithsonian Institution: Anacostia Community Museum" wrapText="true">
+                                                   <padding>
+                                                      <Insets top="3.0" />
+                                                   </padding></CheckBox>
+                                                <CheckBox fx:id="ckbSICHSDM" mnemonicParsing="false" text="Smithsonian Institution: Cooper Hewitt, Smithsonian Design Museum" wrapText="true">
+                                                   <padding>
+                                                      <Insets top="3.0" />
+                                                   </padding></CheckBox>
+                                                <CheckBox fx:id="ckbSIFGA" mnemonicParsing="false" text="Smithsonian Institution: Freer Gallery of Art" wrapText="true">
+                                                   <padding>
+                                                      <Insets top="3.0" />
+                                                   </padding></CheckBox>
+                                                <CheckBox fx:id="ckbSISG" mnemonicParsing="false" text="Smithsonian Institution: Smithsonian Gardens" wrapText="true">
+                                                   <padding>
+                                                      <Insets top="3.0" />
+                                                   </padding></CheckBox>
+                                                <CheckBox fx:id="ckbSIHMSG" mnemonicParsing="false" text="Smithsonian Institution: Hirshhorn Museum and Sculpture Garden" wrapText="true">
+                                                   <padding>
+                                                      <Insets top="3.0" />
+                                                   </padding></CheckBox>
+                                                <CheckBox fx:id="ckbSIA" mnemonicParsing="false" text="Smithsonian Institution Archives" wrapText="true">
+                                                   <padding>
+                                                      <Insets top="3.0" />
+                                                   </padding></CheckBox>
+                                                <CheckBox fx:id="ckbSISL" mnemonicParsing="false" text="Smithsonian Institution: Smithsonian Libraries" wrapText="true">
+                                                   <padding>
+                                                      <Insets top="3.0" />
+                                                   </padding></CheckBox>
+                                                <CheckBox fx:id="ckbSINMNH" mnemonicParsing="false" text="Smithsonian Institution: National Museum of Natural History" wrapText="true">
+                                                   <padding>
+                                                      <Insets top="3.0" />
+                                                   </padding></CheckBox>
+                                                <CheckBox fx:id="ckbSINPG" mnemonicParsing="false" text="Smithsonian Institution: National Portrait Gallery" wrapText="true">
+                                                   <padding>
+                                                      <Insets top="3.0" />
+                                                   </padding></CheckBox>
+                                                <CheckBox fx:id="ckbSINPM" mnemonicParsing="false" text="Smithsonian Institution: National Postal Museum">
+                                                   <padding>
+                                                      <Insets top="3.0" />
+                                                   </padding></CheckBox>
+                                                <CheckBox fx:id="ckbSINZ" mnemonicParsing="false" text="Smithsonian Institution: National Zoo">
+                                                   <padding>
+                                                      <Insets top="3.0" />
+                                                   </padding></CheckBox>
+                                                <CheckBox fx:id="ckbSX" mnemonicParsing="false" text="SpaceX">
+                                                   <padding>
+                                                      <Insets top="3.0" />
+                                                   </padding></CheckBox>
+                                                <CheckBox fx:id="ckbSVGS" mnemonicParsing="false" text="SVG Silh">
+                                                   <padding>
+                                                      <Insets top="3.0" />
+                                                   </padding></CheckBox>
+                                                <CheckBox fx:id="ckbT" mnemonicParsing="false" text="Thingiverse">
+                                                   <padding>
+                                                      <Insets top="3.0" />
+                                                   </padding></CheckBox>
+                                                <CheckBox fx:id="ckbTM" mnemonicParsing="false" text="Thorvaldsens Museum">
+                                                   <padding>
+                                                      <Insets top="3.0" />
+                                                   </padding></CheckBox>
+                                                <CheckBox fx:id="ckbWC" mnemonicParsing="false" text="Wikimedia Commons">
+                                                   <padding>
+                                                      <Insets top="3.0" />
+                                                   </padding></CheckBox>
+                                                <CheckBox fx:id="ckbWOCTC" mnemonicParsing="false" text="WOCinTech Chat">
+                                                   <padding>
+                                                      <Insets top="3.0" />
+                                                   </padding></CheckBox>
+                                                <CheckBox fx:id="ckbWRMS" mnemonicParsing="false" text="World Register of Marine Species">
+                                                   <padding>
+                                                      <Insets top="3.0" />
+                                                   </padding></CheckBox>
                                              </children>
                                           </VBox>
                                        </children>
@@ -260,9 +411,18 @@
                            <children>
                               <VBox layoutX="125.0" layoutY="-53.0" prefHeight="989.0" prefWidth="473.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <children>
-                                    <CheckBox fx:id="ckbPhotos" mnemonicParsing="false" text="Photographs" />
-                                    <CheckBox fx:id="ckbIllustrations" mnemonicParsing="false" text="Illustrations" />
-                                    <CheckBox fx:id="ckbDigitizedArt" mnemonicParsing="false" text="Digitized Artworks" />
+                                    <CheckBox fx:id="ckbPhotos" mnemonicParsing="false" text="Photographs">
+                                       <padding>
+                                          <Insets top="3.0" />
+                                       </padding></CheckBox>
+                                    <CheckBox fx:id="ckbIllustrations" mnemonicParsing="false" text="Illustrations">
+                                       <padding>
+                                          <Insets top="3.0" />
+                                       </padding></CheckBox>
+                                    <CheckBox fx:id="ckbDigitizedArt" mnemonicParsing="false" text="Digitized Artworks">
+                                       <padding>
+                                          <Insets top="3.0" />
+                                       </padding></CheckBox>
                                  </children>
                               </VBox>
                            </children>
@@ -275,10 +435,22 @@
                            <children>
                               <VBox layoutX="178.0" layoutY="317.0" prefHeight="989.0" prefWidth="473.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <children>
-                                    <CheckBox fx:id="ckbJPEG" mnemonicParsing="false" text="JPEGs" />
-                                    <CheckBox fx:id="ckbPNG" mnemonicParsing="false" text="PNGs" />
-                                    <CheckBox fx:id="ckbGIF" mnemonicParsing="false" text="GIFs" />
-                                    <CheckBox fx:id="ckbSVG" mnemonicParsing="false" text="SVGs" />
+                                    <CheckBox fx:id="ckbJPEG" mnemonicParsing="false" text="JPEGs">
+                                       <padding>
+                                          <Insets top="3.0" />
+                                       </padding></CheckBox>
+                                    <CheckBox fx:id="ckbPNG" mnemonicParsing="false" text="PNGs">
+                                       <padding>
+                                          <Insets top="3.0" />
+                                       </padding></CheckBox>
+                                    <CheckBox fx:id="ckbGIF" mnemonicParsing="false" text="GIFs">
+                                       <padding>
+                                          <Insets top="3.0" />
+                                       </padding></CheckBox>
+                                    <CheckBox fx:id="ckbSVG" mnemonicParsing="false" text="SVGs">
+                                       <padding>
+                                          <Insets top="3.0" />
+                                       </padding></CheckBox>
                                  </children>
                               </VBox>
                            </children>
@@ -291,9 +463,18 @@
                            <children>
                               <VBox layoutX="31.0" layoutY="-13.0" prefHeight="989.0" prefWidth="473.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <children>
-                                    <CheckBox fx:id="ckbTall" mnemonicParsing="false" text="Tall" />
-                                    <CheckBox fx:id="ckbWide" mnemonicParsing="false" text="Wide" />
-                                    <CheckBox fx:id="ckbSquare" mnemonicParsing="false" text="Square" />
+                                    <CheckBox fx:id="ckbTall" mnemonicParsing="false" text="Tall">
+                                       <padding>
+                                          <Insets top="3.0" />
+                                       </padding></CheckBox>
+                                    <CheckBox fx:id="ckbWide" mnemonicParsing="false" text="Wide">
+                                       <padding>
+                                          <Insets top="3.0" />
+                                       </padding></CheckBox>
+                                    <CheckBox fx:id="ckbSquare" mnemonicParsing="false" text="Square">
+                                       <padding>
+                                          <Insets top="3.0" />
+                                       </padding></CheckBox>
                                  </children>
                               </VBox>
                            </children>
@@ -306,9 +487,18 @@
                            <children>
                               <VBox layoutX="94.0" layoutY="325.0" prefHeight="989.0" prefWidth="473.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <children>
-                                    <CheckBox fx:id="ckbSmall" mnemonicParsing="false" text="Small" />
-                                    <CheckBox fx:id="ckbMedium" mnemonicParsing="false" text="Medium" />
-                                    <CheckBox fx:id="ckbLarge" mnemonicParsing="false" text="Large" />
+                                    <CheckBox fx:id="ckbSmall" mnemonicParsing="false" text="Small">
+                                       <padding>
+                                          <Insets top="3.0" />
+                                       </padding></CheckBox>
+                                    <CheckBox fx:id="ckbMedium" mnemonicParsing="false" text="Medium">
+                                       <padding>
+                                          <Insets top="3.0" />
+                                       </padding></CheckBox>
+                                    <CheckBox fx:id="ckbLarge" mnemonicParsing="false" text="Large">
+                                       <padding>
+                                          <Insets top="3.0" />
+                                       </padding></CheckBox>
                                  </children>
                               </VBox>
                            </children>
