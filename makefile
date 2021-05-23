@@ -48,6 +48,3 @@ run:
 
 test:
 	$(JVM) $(RCP) CCISJUnitTests
-
-jar:
-	jar cvmf manifest.txt CCIS.jar *.java *.class *.fxml cc_images makefile gson-2.2.4.jar
