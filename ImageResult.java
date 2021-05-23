@@ -50,6 +50,8 @@ public class ImageResult
         root.add(btnDownload, 1, 2);
         root.setColumnSpan(btnDownload, 4);
 
+        root.setStyle("-fx-border-color: #000; -fx-border-width: 2px; -fx-padding: 8px; -fx-margin: 8px; -fx-hgap: 8px; -fx-vgap: 8px;");
+
         btnDownload.setOnAction(e -> btnDownloadPressed(e));
         btnMore.setOnAction(e -> btnMorePressed(e));
     }
