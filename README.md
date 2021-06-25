@@ -1,5 +1,5 @@
 # Creative Commons Image Search
-This is a graphical java application that searches for images with a Creative Commons license or is in the public domain. This is achieved through the Creative Commons api. The Creative Commons website can be found here: [https://creativecommons.org](https://creativecommons.org).
+This is a graphical javafx application that I made for my final in my Programing Concepts and Methedology II class. This application searches for images with a Creative Commons license or is in the public domain. This is achieved through the Creative Commons api. The Creative Commons website can be found here: [https://creativecommons.org](https://creativecommons.org).
 
 ## Dependencies
 `curl` must be installed and in your path.
