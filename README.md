@@ -4,6 +4,8 @@ This is a graphical javafx application that I made for my final in my Programing
 ## Dependencies
 `curl` must be installed and in your path.
 
+You need to get a brearer token for the Creative Commons api. Instructions for obtaining a brearer token can be found here: [https://api.creativecommons.engineering/v1/#operation/register_api_oauth2](https://api.creativecommons.engineering/v1/#operation/register_api_oauth2). In CCISModel.java, replace the string "put brearer token here" with your brearer token.
+
 ## Build
 The application can be build by running `make`. Be sure to run `make clean` between builds.
 
